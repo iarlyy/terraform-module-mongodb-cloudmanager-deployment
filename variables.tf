@@ -1,10 +1,23 @@
-variable "name" {}
-variable "key_name" {}
-variable "instance_type" {}
-variable "cloud_manager_group_id_secret_name" {}
-variable "cloud_manager_api_key_secret_name" {}
-variable "vpc_id" {}
-variable "ami" {}
+variable "name" {
+}
+
+variable "key_name" {
+}
+
+variable "instance_type" {
+}
+
+variable "cloud_manager_group_id_secret_name" {
+}
+
+variable "cloud_manager_api_key_secret_name" {
+}
+
+variable "vpc_id" {
+}
+
+variable "ami" {
+}
 
 variable "pool_size" {
   default = 1
@@ -31,21 +44,22 @@ variable "datadir_volume_delete_on_termination" {
 }
 
 variable "associate_iam_policies" {
-  type    = "list"
+  type    = list(string)
   default = []
 }
 
 variable "security_group_ids" {
-  type    = "list"
+  type    = list(string)
   default = []
 }
 
 variable "ec2_subnet_ids" {
-  type    = "list"
+  type    = list(string)
   default = []
 }
 
 variable "lb_subnet_ids" {
-  type    = "list"
+  type    = list(string)
   default = []
 }
+
